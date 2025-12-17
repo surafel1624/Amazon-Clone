@@ -14,9 +14,11 @@ function Header() {
         <div className={classes.header__container}>
           {/* log section */}
           <div className={classes.logo__container}>
-            <a href="/">
-              <img src={Amazon} alt="amazon logo" />
-            </a>
+            <div>
+              <a href="/">
+                <img src={Amazon} alt="amazon logo" />
+              </a>
+            </div>
             <div className={classes.delivery}>
               <span>
                 <SlLocationPin />
@@ -38,12 +40,12 @@ function Header() {
           {/* other section */}
           <div className={classes.order__container}>
             <div>
-              <a href="" className={classes.language}>
+              <div className={classes.language}>
                 <img src={Flag} alt="us-flag" />
                 <select name="" id="">
                   <option value="">EN</option>
                 </select>
-              </a>
+              </div>
             </div>
             <a href="">
               <div>

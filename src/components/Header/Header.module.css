@@ -11,15 +11,19 @@
     height: 70px;
 }
 .logo__container{
+    margin-left: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 250px;
+    max-width: 230px;
+}
+.logo__container div{
+    margin-right: 3px;
 }
 .logo__container img{
     width: 80%;
-    padding-top: 5px;
-    margin-left: 20px;
+    padding: 10px 5px 5px 5px;
+    margin-left: 15px;
     vertical-align: middle;
 }
 .delivery{
@@ -77,11 +81,14 @@
     text-decoration: none;
     color: white;
 }
+.order__container a:not(:first-child){
+    padding: 3px;
+}
 .order__container p{
     font-size: 10px;
 }
 .language{
-    width: 100px;
+    width: 70px;
     display: flex;
     padding: 10px;
 }
@@ -95,14 +102,15 @@
 }
 .cart{
     position: relative;
+    margin-right: 3px;
 }
 .cart span{
     position: absolute;
     font-weight: bold;
-    top: -6px;
+    top: 1px;
     font-size: 20px;
     background-color: #1a1a1a;
-    left: 14px;
+    left: 18px;
     color: orange;
 }
 .lower__container{
@@ -116,15 +124,20 @@
 }
 .lower__container ul li{
     padding: 8px;
+    margin: 1px 0px;
 }
 .lower__container ul li:first-child{
     display: flex;
     gap: 2px;
     align-items: center;
 }
-.order__container a:hover, .delivery:hover, .logo__container a:hover, .lower__container ul li:hover{
+.order__container a, .language, .delivery, .logo__container img, .lower__container ul li{
+    border: 1px solid transparent;
+}
+.order__container a:hover, .language:hover, .delivery:hover, .logo__container img:hover, .lower__container ul li:hover{
     border: 1px solid white;
     border-radius: 3px;
+    cursor: pointer;
 }
 @media screen and (max-width: 576px) {
     .header__container{
