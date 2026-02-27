@@ -15,8 +15,8 @@ export const categoryInfo =[
         imgLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-RLGGN2Y9fKEFHbqhSlQu9IfHaJ5FtYOeA&s",
     },
     {
-        title: "Jewelry",
-        name: "jewelry",
+        title: "Jewelery",
+        name: "jewelery",
         imgLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdxLudg5G2Q-gp0SsoxnaundyIEquCwbr0oQ&s",
     },
 ];
