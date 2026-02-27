@@ -1,6 +1,7 @@
 import React from 'react'
 import LowerHeader from './LowerHeader'
 import classes from './Header.module.css'
+import { Link } from 'react-router-dom'
 import Amazon from '../../assets/images/amazon.png'
 import Flag from '../../assets/images/us-flag.png'
 import { SlLocationPin } from "react-icons/sl";
@@ -15,9 +16,9 @@ function Header() {
           {/* log section */}
           <div className={classes.logo__container}>
             <div>
-              <a href="/">
+              <Link to="/">
                 <img src={Amazon} alt="amazon logo" />
-              </a>
+              </Link>
             </div>
             <div className={classes.delivery}>
               <span>
@@ -47,20 +48,20 @@ function Header() {
                 </select>
               </div>
             </div>
-            <a href="">
+            <Link to="">
               <div>
                 <p>sign in</p>
                 <span>Accont & Lists</span>
               </div>
-            </a>
-            <a href="">
+            </Link>
+            <Link to="/orders">
               <p>Returns</p>
               <span>& Orders</span>
-            </a>
-            <a href="" className={classes.cart}>
+            </Link>
+            <Link to="/cart" className={classes.cart}>
               <BiCart size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
