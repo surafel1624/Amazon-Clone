@@ -8,10 +8,11 @@ import { SlLocationPin } from "react-icons/sl";
 import { IoIosSearch } from "react-icons/io";
 import { BiCart } from "react-icons/bi";
 import { DataContext } from '../DataProvider/DataProvider'
+import { auth } from '../../Utility/firebase1'
 
 function Header() {
 
-  const [{basket}, dispatch] = useContext(DataContext);
+  const [{user, basket}, dispatch] = useContext(DataContext);
   const totalItem = basket?.reduce((amount, item)=>{
     return item.amount + amount
   }, 0);
@@ -42,7 +43,7 @@ function Header() {
             <select name="" id="">
               <option value="">All</option>
             </select>
-            <input type="text" name="" id="" placeholder='search product' />
+            <input type="text" name="searhc" id="search" placeholder='search product' />
             <IoIosSearch size={25} />
           </div>
           {/* other section */}
@@ -55,10 +56,20 @@ function Header() {
                 </select>
               </div>
             </div>
-            <Link to="/auth">
+            <Link to={!user && "/auth"}>
               <div>
-                <p>sign in</p>
-                <span>Accont & Lists</span>
+                {user ? (
+                  <>
+                    <p>Hello, {user?.email?.split("@")[0]}</p>
+                    <span onClick={()=>auth.signOut()}>Sign Out</span>
+                  </>
+                ) : (
+                  <>
+                    <p>Hello, sign in</p>
+                    <span>Accont & Lists</span>
+                  </>
+                )
+                }
               </div>
             </Link>
             <Link to="/orders">
