@@ -55,7 +55,7 @@ function Header() {
                 </select>
               </div>
             </div>
-            <Link to="">
+            <Link to="/auth">
               <div>
                 <p>sign in</p>
                 <span>Accont & Lists</span>
