@@ -10,7 +10,7 @@ function CarouselEffect() {
         <Carousel autoPlay={true} infiniteLoop={true} showIndicators={false} showThumbs={false}>
             {
                 carouselImg.map((images) => {
-                    return <img src={images} />
+                    return <img key={images} src={images} />
                 })
             }
         </Carousel>
